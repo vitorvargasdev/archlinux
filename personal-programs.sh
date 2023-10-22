@@ -17,12 +17,8 @@ sudo pacman -S --noconfirm --needed \
     telegram-desktop \
     tor
 
-sudo pacman -Syu --noconfirm --needed qemu-full virt-manager dnsmasq libvirt
-
 systemctl enable docker
 systemctl enable tor
-systemctl start  virtqemud
-systemctl enable virtqemud
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
