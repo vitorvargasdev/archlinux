@@ -6,6 +6,9 @@ cryptRoot="/dev/mapper/${cryptName}"
 baseSystem="base base-devel linux linux-headers linux-firmware nano git reflector"
 
 # Preconfigure your volumes with F32 and BTRFS
+pacman -Sy --noconfirm archlinux-keyring
+
+pacman-key --init && pacman-key --populate
 
 pacman -Syu --noconfirm --needed reflector
 
