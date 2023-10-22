@@ -10,10 +10,6 @@ pacman -Sy --noconfirm archlinux-keyring
 
 pacman-key --init && pacman-key --populate
 
-pacman -Syu --noconfirm --needed reflector
-
-reflector -c Brazil -a 6 --sort rate > /etc/pacman.d/mirrorlist
-
 mkfs.fat -F32 $volumeBoot
 
 cryptsetup luksFormat --use-random -S 1 -s 512 -h sha512 $volumeRoot
