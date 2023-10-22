@@ -17,7 +17,7 @@ editor 0
 #console-mode keep
 EOF
 
-cat > /boot/loader/loader.conf<<EOF
+cat > /boot/loader/entries/arch.conf<<EOF
 title Arch Linux
 linux /vmlinuz-linux
 initrd /initramfs-linux.img
