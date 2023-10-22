@@ -3,7 +3,7 @@ sudo pacman -S --noconfirm --needed git
 git clone https://aur.archlinux.org/yay.git
 cd yay && makepkg -sri --noconfirm
 
-yay -S pamac-all libpamac-full spotify-adblock pamac-cli visual-studio-code-insiders-bin --noconfirm
+yay -S pamac-all libpamac-full spotify-adblock pamac-cli visual-studio-code-insiders-bin chrome-gnome-shell --noconfirm
 
 sudo pacman -S --noconfirm --needed \
     flatpak \
