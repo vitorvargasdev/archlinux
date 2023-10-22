@@ -1,13 +1,11 @@
 volumeBoot=/boot/
 volumeRoot=/dev/nvme0n1p2
 cryptName=crypt
-cryptRoot=/dev/mapper/$cryptName
+cryptRoot="/dev/mapper/${cryptName}"
 
-cryptUuid=${blkid -s UUID -o value $cryptDisk}
+cryptUuid=$(blkid -s UUID -o value $volumeRoot)
 
 bootctl --path=$volumeBoot install
-
-# blkid -s UUID -o value /dev/nvme0n1p2
 
 cat > /boot/loader/loader.conf<<EOF
 default arch
