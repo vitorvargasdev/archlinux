@@ -19,17 +19,17 @@ mount $cryptRoot /mnt
 cd /mnt
 btrfs subvolume create @
 btrfs subvolume create @home
-btrfs subvolume create @.snapshots
+btrfs subvolume create @snapshots
 cd
 umount -R /mnt
 mount -o noatime,compress=zstd,space_cache=v2,discard=async,subvol=@ $cryptRoot /mnt
 
 mkdir /mnt/home
-mkdir /mnt/.snapshots
+mkdir /mnt/snapshots
 mkdir /mnt/boot
 
 mount -o noatime,compress=zstd,space_cache=v2,discard=async,subvol=@home $cryptRoot /mnt/home
-mount -o noatime,compress=zstd,space_cache=v2,discard=async,subvol=@.snapshots $cryptRoot /mnt/.snapshots
+mount -o noatime,compress=zstd,space_cache=v2,discard=async,subvol=@snapshots $cryptRoot /mnt/snapshots
 
 mount $volumeBoot /mnt/boot
 
