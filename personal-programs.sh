@@ -12,7 +12,6 @@ sudo pacman -S --noconfirm --needed \
     docker-compose \
     bitwarden \
     go \
-    go-task \
     mariadb-clients \
     telegram-desktop \
     tor
