@@ -68,3 +68,4 @@ pacman -Syu --noconfirm --needed \
 systemctl enable NetworkManager
 systemctl enable bluetooth
 systemctl enable gdm
+systemctl enable cronie
