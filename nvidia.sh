@@ -51,3 +51,5 @@ options nvidia-drm modeset=1
 EOF
 
 mkinitcpio -P
+
+nvidia-xconfig

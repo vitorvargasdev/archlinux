@@ -25,11 +25,11 @@ umount -R /mnt
 mount -o noatime,compress=zstd,space_cache=v2,discard=async,subvol=@ $cryptRoot /mnt
 
 mkdir /mnt/home
-mkdir /mnt/snapshots
+mkdir /mnt/.snapshots
 mkdir /mnt/boot
 
-mount -o noatime,compress=zstd,space_cache=v2,discard=async,subvol=@home $cryptRoot /mnt/home
-mount -o noatime,compress=zstd,space_cache=v2,discard=async,subvol=@snapshots $cryptRoot /mnt/snapshots
+mount -t btrfs -o defaults,x-mount.mkdir,noatime,compress=zstd,space_cache=v2,discard=async,subvol=@home $cryptRoot /mnt/home
+mount -t btrfs -o defaults,x-mount.mkdir,noatime,compress=zstd,space_cache=v2,discard=async,subvol=@snapshots $cryptRoot /mnt/.snapshots
 
 mount $volumeBoot /mnt/boot
 
