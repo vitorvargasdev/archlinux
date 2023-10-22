@@ -1,11 +1,11 @@
-pacman -S --noconfirm --needed git
+sudo pacman -S --noconfirm --needed git
 
 git clone https://aur.archlinux.org/yay.git
 cd yay && makepkg -sri --noconfirm
 
-yay -S pamac-all libpamac-full spotify-adblock pamac-cli visual-studio-code-bin --noconfirm
+yay -S pamac-all libpamac-full spotify-adblock pamac-cli visual-studio-code-insiders-bin --noconfirm
 
-pacman -S --noconfirm --needed \
+sudo pacman -S --noconfirm --needed \
     flatpak \
     dbeaver \
     docker \
@@ -17,8 +17,12 @@ pacman -S --noconfirm --needed \
     telegram-desktop \
     tor
 
+sudo pacman -Syu --noconfirm --needed qemu-full virt-manager dnsmasq libvirt
+
 systemctl enable docker
 systemctl enable tor
+systemctl start  virtqemud
+systemctl enable virtqemud
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 

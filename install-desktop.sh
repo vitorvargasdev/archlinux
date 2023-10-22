@@ -1,13 +1,6 @@
-# Parallel Downloads
-echo "ParallelDownloads = 5" >> /etc/pacman.conf
-
-# Add multilib
-echo "[multilib]" >> /etc/pacman.conf
-echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
-
 pacman -Syu --noconfirm --needed reflector
 
-reflector -c Brazil -a 6 --sort rate --save /etc/pacman.d/mirrorlist
+reflector -c Brazil -a 6 --sort rate > /etc/pacman.d/mirrorlist
 
 # Gnome Complete desktop
 pacman -Syu --noconfirm --needed \
@@ -75,6 +68,3 @@ pacman -Syu --noconfirm --needed \
 systemctl enable NetworkManager
 systemctl enable bluetooth
 systemctl enable gdm
-
-# Install virtualization programs (opcional)
-pacman -Syu --noconfirm --needed qemu-full virt-manager dnsmasq libvirt
