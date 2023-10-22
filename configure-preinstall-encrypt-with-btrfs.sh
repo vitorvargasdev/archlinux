@@ -1,7 +1,7 @@
-volumeBoot=/dev/nvme0n1p1
-volumeRoot=/dev/nvme0n1p2
-cryptName=crypt
-cryptRoot=/dev/mapper/$cryptName
+volumeBoot="/dev/nvme0n1p1"
+volumeRoot="/dev/nvme0n1p2"
+cryptName="crypt"
+cryptRoot="/dev/mapper/${cryptName}"
 
 baseSystem="base base-devel linux linux-headers linux-firmware nano git reflector"
 
