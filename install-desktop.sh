@@ -1,6 +1,6 @@
 pacman -Syu --noconfirm --needed reflector
 
-reflector -c Brazil -a 6 --sort rate > /etc/pacman.d/mirrorlist
+reflector -c Brazil -a 6 --sort rate --save /etc/pacman.d/mirrorlist
 
 # Gnome Complete desktop
 pacman -Syu --noconfirm --needed \
