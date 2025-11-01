@@ -6,8 +6,11 @@ reflector -c Brazil -a 6 --sort rate --save /etc/pacman.d/mirrorlist
 pacman -Syu --noconfirm --needed \
     xorg \
     xorg-server \
-    gnome \
-    gnome-desktop \
+    i3-wm \
+    i3status \
+    i3blocks \
+    gnome-shell \
+    gdm \
     netctl \
     linux-firmware \
     linux \
@@ -19,7 +22,7 @@ pacman -Syu --noconfirm --needed \
     iwd \
     mesa \
     mesa-utils \
-    neofetch \
+    fastfetch \
     networkmanager \
     otf-ipafont \
     ttf-fira-code \
@@ -57,7 +60,13 @@ pacman -Syu --noconfirm --needed \
     alacarte \
     nautilus \
     zsh \
-    dosfstools
+    dosfstools \
+    yazi \
+    zsh \
+    firefox \
+    rofi
+
+useradd -m -G wheel,users -s /bin/zsh johndoe
 
 systemctl enable NetworkManager
 systemctl enable bluetooth
