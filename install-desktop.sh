@@ -47,14 +47,8 @@ pacman -Syu --noconfirm --needed \
     qalculate-gtk \
     nano \
     mtools \
-    gnome-weather \
-    gnome-tweaks \
-    gnome-themes-extra \
-    gnome-shell-extension-appindicator \
-    gnome-shell-extensions \
     fuse2 \
     efibootmgr \
-    grub \
     git \
     dnsmasq \
     dialog \
